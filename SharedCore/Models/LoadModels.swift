@@ -64,7 +64,10 @@ enum TrainingLoadBand: String, CaseIterable {
     case buildingHistory = "Building History"
 
     init(acuteToChronicRatio: Double?) {
-        guard let ratio = acuteToChronicRatio else { self = .buildingHistory }
+        guard let ratio = acuteToChronicRatio else {
+            self = .buildingHistory
+            return
+        }
         switch ratio {
         case ..<ScoringConstants.Load.recoveringUpperRatio:
             self = .recovering
