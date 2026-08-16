@@ -21,9 +21,9 @@ final class HealthKitManager: HealthDataProviding {
     private var sleepType: HKCategoryType? {
         HKCategoryType.categoryType(forIdentifier: .sleepAnalysis)
     }
-    private var workoutType: HKObjectType { HKObjectType.workoutType() }
+    private var workoutType: HKWorkoutType { HKObjectType.workoutType() }
 
-    private static let beatsPerMinute = HKUnit.count().unitDivided(by: .minuteUnit())
+    private static let beatsPerMinute = HKUnit.count().unitDivided(by: .minute())
     private static let milliseconds = HKUnit.secondUnit(with: .milli)
     private static let kilocalories = HKUnit.kilocalorie()
     private static let kilometers = HKUnit.meterUnit(with: .kilo)
@@ -35,7 +35,7 @@ final class HealthKitManager: HealthDataProviding {
             throw MyHealthError.healthKitUnavailable
         }
 
-        var readTypes = Set<HKObjectType>()
+        var readTypes = Set<HKSampleType>()
         for identifier: HKQuantityTypeIdentifier in [
             .heartRate, .restingHeartRate, .heartRateVariabilitySDNN,
             .activeEnergyBurned, .stepCount, .vo2Max, .walkingHeartRateAverage,
@@ -175,7 +175,7 @@ final class HealthKitManager: HealthDataProviding {
         // VO2 max is expressed in ml/kg/min.
         let unit = HKUnit.literUnit(with: .milli)
             .unitDivided(by: HKUnit.gramUnit(with: .kilo))
-            .unitDivided(by: HKUnit.minuteUnit())
+            .unitDivided(by: .minute())
         let samples = try await latestSamples(identifier: .vo2Max, unit: unit, limit: 1)
         return samples.first?.value
     }
@@ -186,8 +186,8 @@ final class HealthKitManager: HealthDataProviding {
     }
 
     func dateOfBirth() -> Date? {
-        let components = store.dateOfBirthComponents()
-        return components.date
+        let components = try? store.dateOfBirthComponents()
+        return components?.date
     }
 
     // MARK: Workouts

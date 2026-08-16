@@ -24,7 +24,7 @@ enum UnavailabilityReason: Equatable, Hashable {
 
 /// The state machine every myhealth metric renders through (docs/HEALTH_DATA.md).
 /// A value is only ever shown in the `.available` case — never fabricated.
-enum HealthDataState<Value>: Equatable where Value: Equatable {
+enum HealthDataState<Value> {
     case loading
     case available(Value)
     case unavailable(UnavailabilityReason)
@@ -44,6 +44,8 @@ enum HealthDataState<Value>: Equatable where Value: Equatable {
         return false
     }
 }
+
+extension HealthDataState: Equatable where Value: Equatable {}
 
 /// A single heart-rate measurement in beats per minute.
 struct HeartRateSample: Equatable, Hashable, Codable {

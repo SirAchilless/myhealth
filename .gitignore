@@ -10,3 +10,4 @@ tmp/
 .zcode/
 # Unlicensed third-party reference code — local only, never published.
 reference/
+*.log

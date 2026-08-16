@@ -203,7 +203,7 @@ private final class ExportXMLDelegate: NSObject, XMLParserDelegate {
     private func handleRecord(_ attributes: [String: String]) {
         let type = attributes["type"] ?? ""
 
-        if type == heartRate {
+        if type == Self.heartRate {
             guard let value = Double(attributes["value"] ?? ""),
                   let endDate = Self.exportDateFormatter.date(from: attributes["endDate"] ?? ""),
                   now.timeIntervalSince(endDate) <= Self.recentHeartRateWindow,
@@ -213,7 +213,7 @@ private final class ExportXMLDelegate: NSObject, XMLParserDelegate {
             return
         }
 
-        if type == restingHeartRate {
+        if type == Self.restingHeartRate {
             guard let value = Double(attributes["value"] ?? ""),
                   let startDate = Self.exportDateFormatter.date(from: attributes["startDate"] ?? "") else { return }
             let day = Self.dayFormatter.string(from: startDate)
@@ -223,7 +223,7 @@ private final class ExportXMLDelegate: NSObject, XMLParserDelegate {
             return
         }
 
-        if type == hrv {
+        if type == Self.hrv {
             guard let value = Double(attributes["value"] ?? ""),
                   let startDate = Self.exportDateFormatter.date(from: attributes["startDate"] ?? "") else { return }
             guard now.timeIntervalSince(startDate) <= Self.hrvWindow else { return }
@@ -232,7 +232,7 @@ private final class ExportXMLDelegate: NSObject, XMLParserDelegate {
             return
         }
 
-        if type == sleepAnalysis {
+        if type == Self.sleepAnalysis {
             guard let stage = Self.sleepStage(fromValue: attributes["value"] ?? ""),
                   let startDate = Self.exportDateFormatter.date(from: attributes["startDate"] ?? ""),
                   let endDate = Self.exportDateFormatter.date(from: attributes["endDate"] ?? "") else { return }
@@ -242,11 +242,11 @@ private final class ExportXMLDelegate: NSObject, XMLParserDelegate {
             return
         }
 
-        if type == steps || type == activeEnergy {
+        if type == Self.steps || type == Self.activeEnergy {
             guard let value = Double(attributes["value"] ?? ""),
                   let startDate = Self.exportDateFormatter.date(from: attributes["startDate"] ?? "") else { return }
             let day = Self.dayFormatter.string(from: startDate)
-            if type == steps {
+            if type == Self.steps {
                 stepsByDay[day, default: 0] += value
             } else {
                 energyByDay[day, default: 0] += value
@@ -255,7 +255,7 @@ private final class ExportXMLDelegate: NSObject, XMLParserDelegate {
             return
         }
 
-        if type == vo2Max {
+        if type == Self.vo2Max {
             guard let value = Double(attributes["value"] ?? ""),
                   let endDate = Self.exportDateFormatter.date(from: attributes["endDate"] ?? "") else { return }
             if vo2MaxLatest == nil || vo2MaxLatest!.date < endDate {
@@ -265,7 +265,7 @@ private final class ExportXMLDelegate: NSObject, XMLParserDelegate {
             return
         }
 
-        if type == walkingHeartRate {
+        if type == Self.walkingHeartRate {
             guard let value = Double(attributes["value"] ?? ""),
                   let endDate = Self.exportDateFormatter.date(from: attributes["endDate"] ?? "") else { return }
             if walkingLatest == nil || walkingLatest!.date < endDate {
@@ -275,7 +275,7 @@ private final class ExportXMLDelegate: NSObject, XMLParserDelegate {
             return
         }
 
-        if type == dateOfBirthType, dateOfBirth == nil {
+        if type == Self.dateOfBirthType, dateOfBirth == nil {
             dateOfBirth = Self.dayFormatter.date(from: attributes["value"] ?? "")
         }
     }

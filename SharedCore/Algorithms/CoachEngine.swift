@@ -83,14 +83,14 @@ enum CoachEngine {
         var gaps: [String] = []
         var lines: [String] = []
 
-        if let recovery, recovery.hasScore {
+        if let recovery = context.recovery, recovery.hasScore {
             lines.append("Recovery \(recovery.score) — \(recovery.category.rawValue.lowercased()).")
         } else {
             gaps.append("recovery data is still building")
         }
 
-        if let sleep, sleep.hasScore, let score = sleep.score {
-            lines.append("Sleep \(score) — slept \(Formatting.hoursMinutes(fromMinutes: sleep.night.breakdown.asleepMinutes)).")
+        if let sleepResult = context.sleep, sleepResult.hasScore, let score = sleepResult.score {
+            lines.append("Sleep \(score) — slept \(Formatting.hoursMinutes(fromMinutes: sleepResult.night.breakdown.asleepMinutes)).")
         } else {
             gaps.append("no sleep analysis yet")
         }

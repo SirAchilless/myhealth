@@ -38,7 +38,7 @@ final class WorkoutSessionController: NSObject, ObservableObject {
     private let restingHeartRate: () -> Double?
     private let onSave: (WorkoutSummary) -> Void
 
-    private static let bpmUnit = HKUnit.count().unitDivided(by: .minuteUnit())
+    private static let bpmUnit = HKUnit.count().unitDivided(by: .minute())
     private static let kilocalorieUnit = HKUnit.kilocalorie()
     private static let kilometerUnit = HKUnit.meterUnit(with: .kilo)
 

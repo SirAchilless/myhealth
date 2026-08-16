@@ -249,7 +249,7 @@ final class HealthDataRepository: ObservableObject {
                 from: heartSamples,
                 windowMinutes: ScoringConstants.Stress.windowMinutes
             ) { date in
-                sleepRanges.contains { date >= $0.0 && date <= $1.0 }
+                sleepRanges.contains { date >= $0.0 && date <= $0.1 }
             }
             let result = StressEngine.compute(
                 windows: windows,
@@ -258,7 +258,11 @@ final class HealthDataRepository: ObservableObject {
                 hrvBaseline: hrvBaseline
             )
             stressResult = result
-            snapshot.stress = result.map { .available($0) } ?? .unavailable(.noData)
+            if let result {
+                snapshot.stress = .available(result)
+            } else {
+                snapshot.stress = .unavailable(.noData)
+            }
         }
 
         // MARK: Energy.

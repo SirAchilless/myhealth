@@ -16,9 +16,9 @@ enum BaselineCalculator {
         return (sorted[count / 2 - 1] + sorted[count / 2]) / 2
     }
 
-    static func medianAbsoluteDeviation(_ values: [Double], median: Double) -> Double? {
+    static func medianAbsoluteDeviation(_ values: [Double], median medianValue: Double) -> Double? {
         guard !values.isEmpty else { return nil }
-        return median(values.map { abs($0 - median) })
+        return median(values.map { abs($0 - medianValue) })
     }
 
     // MARK: Baseline construction

@@ -36,7 +36,7 @@ enum SleepNightAssembler {
 
         // Assemble each cluster, then keep meaningful nights only.
         return clusters
-            .map(assemble(cluster:calendar:))
+            .map { assemble(cluster: $0, calendar: calendar) }
             .compactMap { night -> SleepNight? in
                 guard night.breakdown.asleepMinutes >= minimumNightAsleepMinutes else {
                     return nil
