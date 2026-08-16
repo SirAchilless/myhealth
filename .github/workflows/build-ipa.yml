@@ -44,7 +44,8 @@ jobs:
             -target MyHealthIPhone \
             -configuration Release \
             -sdk iphoneos \
-            -derivedDataPath build \
+            SYMROOT=build \
+            OBJROOT=build/Obj \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
@@ -55,7 +56,7 @@ jobs:
         id: app
         run: |
           set -euo pipefail
-          APP="$(find build/Build/Products/Release-iphoneos -maxdepth 1 -name '*.app' -type d | head -n 1)"
+          APP="$(find build/Release-iphoneos -maxdepth 1 -name '*.app' -type d | head -n 1)"
           if [ -z "$APP" ]; then
             echo "::error::No .app produced by the build"
             exit 1
