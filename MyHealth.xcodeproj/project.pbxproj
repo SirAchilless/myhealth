@@ -48,12 +48,59 @@
 		0000000000000000000000F3 /* MyHealthIPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHealthIPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		000000000000000000000011 /* Exceptions for "MyHealthWatch" folder in "MyHealthWatch" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				MyHealthWatch.entitlements,
+			);
+			target = 0000000000000000000000A1 /* MyHealthWatch */;
+		};
+		000000000000000000000012 /* Exceptions for "MyHealthWidgets" folder in "MyHealthWidgets" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				MyHealthWidgets.entitlements,
+			);
+			target = 0000000000000000000000B1 /* MyHealthWidgets */;
+		};
+		000000000000000000000013 /* Exceptions for "MyHealthIPhone" folder in "MyHealthIPhone" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0000000000000000000000F2 /* MyHealthIPhone */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0000000000000000000000AA /* MyHealthWatch */ = {isa = PBXFileSystemSynchronizedRootGroup; path = MyHealthWatch; sourceTree = "<group>"; };
-		0000000000000000000000BA /* MyHealthWidgets */ = {isa = PBXFileSystemSynchronizedRootGroup; path = MyHealthWidgets; sourceTree = "<group>"; };
+		0000000000000000000000AA /* MyHealthWatch */ = {
+			exceptions = (
+				000000000000000000000011 /* Exceptions for "MyHealthWatch" folder in "MyHealthWatch" target */,
+			);
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MyHealthWatch;
+			sourceTree = "<group>";
+		};
+		0000000000000000000000BA /* MyHealthWidgets */ = {
+			exceptions = (
+				000000000000000000000012 /* Exceptions for "MyHealthWidgets" folder in "MyHealthWidgets" target */,
+			);
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MyHealthWidgets;
+			sourceTree = "<group>";
+		};
 		0000000000000000000000CA /* MyHealthWatchTests */ = {isa = PBXFileSystemSynchronizedRootGroup; path = MyHealthWatchTests; sourceTree = "<group>"; };
 		0000000000000000000000F0 /* SharedCore */ = {isa = PBXFileSystemSynchronizedRootGroup; path = SharedCore; sourceTree = "<group>"; };
-		0000000000000000000000F1 /* MyHealthIPhone */ = {isa = PBXFileSystemSynchronizedRootGroup; path = MyHealthIPhone; sourceTree = "<group>"; };
+		0000000000000000000000F1 /* MyHealthIPhone */ = {
+			exceptions = (
+				000000000000000000000013 /* Exceptions for "MyHealthIPhone" folder in "MyHealthIPhone" target */,
+			);
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MyHealthIPhone;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
