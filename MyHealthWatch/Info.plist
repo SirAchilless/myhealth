@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>myhealth</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.myhealth.watch</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>myhealth</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>myhealth reads your heart rate, heart-rate variability, resting heart rate, sleep, workouts, and activity from Apple Health to compute your personal recovery, sleep, load, stress, and energy insights on your watch. All processing happens on your devices.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Workouts you record with myhealth are saved to Apple Health.</string>
+	<key>WKApplication</key>
+	<true/>
+	<key>WKWatchOnly</key>
+	<true/>
+</dict>
+</plist>

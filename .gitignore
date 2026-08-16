@@ -1,0 +1,12 @@
+.DS_Store
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+*.ipa
+*.dSYM
+*.xcarchive
+tmp/
+.zcode/
+# Unlicensed third-party reference code — local only, never published.
+reference/

@@ -1,0 +1,91 @@
+name: Build myhealth IPA (sideload)
+
+# Builds an UNSIGNED iOS IPA of myhealth for sideloading with Sideloadly.
+# Sideloadly signs the app with your own Apple ID during installation, so no
+# certificates or secrets are needed in CI.
+#
+# Artifact: myhealth.ipa — download from the run's Artifacts section,
+# drop it into Sideloadly, sign with your Apple ID, install.
+#
+# Note: this IPA is the export-driven iPhone build (MyHealthIPhone target).
+# It uses no HealthKit entitlements — insights come from importing an Apple
+# Health export inside the app.
+
+on:
+  push:
+    branches: ["**"]
+    tags: ["v*"]
+  workflow_dispatch:
+
+concurrency:
+  group: build-ipa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-ipa:
+    name: Unsigned IPA for Sideloadly
+    runs-on: macos-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          xcodebuild -showsdks | grep -i iphoneos || true
+
+      - name: Build unsigned app
+        run: |
+          set -euo pipefail
+          xcodebuild build \
+            -project MyHealth.xcodeproj \
+            -target MyHealthIPhone \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            AD_HOC_CODE_SIGNING_ALLOWED=YES \
+            DEVELOPMENT_TEAM=""
+
+      - name: Locate app bundle
+        id: app
+        run: |
+          set -euo pipefail
+          APP="$(find build/Build/Products/Release-iphoneos -maxdepth 1 -name '*.app' -type d | head -n 1)"
+          if [ -z "$APP" ]; then
+            echo "::error::No .app produced by the build"
+            exit 1
+          fi
+          echo "path=$APP" >> "$GITHUB_OUTPUT"
+          echo "Found $APP"
+
+      - name: Package IPA
+        run: |
+          set -euo pipefail
+          rm -rf Payload myhealth.ipa
+          mkdir Payload
+          cp -R "${{ steps.app.outputs.path }}" Payload/
+          # Zip with the app as the second path component (Payload/App.app),
+          # which is what IPA installers expect.
+          zip -qry myhealth.ipa Payload
+          unzip -l myhealth.ipa | head -n 8
+          ls -lh myhealth.ipa
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: myhealth-ipa
+          path: myhealth.ipa
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Attach to release (tags only)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: myhealth.ipa
+          generate_release_notes: true

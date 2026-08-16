@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	objectVersion = 70;
+	classes = {
+	};
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0000000000000000000000D1 /* MyHealthWidgets.appex in PlugIns */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000B2 /* MyHealthWidgets.appex */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0000000000000000000000D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0000000000000000000000A1;
+			remoteInfo = MyHealthWatch;
+		};
+		0000000000000000000000D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0000000000000000000000B1;
+			remoteInfo = MyHealthWidgets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0000000000000000000000A6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0000000000000000000000D1 /* MyHealthWidgets.appex in PlugIns */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0000000000000000000000A2 /* MyHealthWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHealthWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0000000000000000000000B2 /* MyHealthWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyHealthWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0000000000000000000000C2 /* MyHealthWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyHealthWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0000000000000000000000F3 /* MyHealthIPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHealthIPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0000000000000000000000AA /* MyHealthWatch */ = {isa = PBXFileSystemSynchronizedRootGroup; path = MyHealthWatch; sourceTree = "<group>"; };
+		0000000000000000000000BA /* MyHealthWidgets */ = {isa = PBXFileSystemSynchronizedRootGroup; path = MyHealthWidgets; sourceTree = "<group>"; };
+		0000000000000000000000CA /* MyHealthWatchTests */ = {isa = PBXFileSystemSynchronizedRootGroup; path = MyHealthWatchTests; sourceTree = "<group>"; };
+		0000000000000000000000F0 /* SharedCore */ = {isa = PBXFileSystemSynchronizedRootGroup; path = SharedCore; sourceTree = "<group>"; };
+		0000000000000000000000F1 /* MyHealthIPhone */ = {isa = PBXFileSystemSynchronizedRootGroup; path = MyHealthIPhone; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0000000000000000000000A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0000000000000000000000B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0000000000000000000000C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0000000000000000000000FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000AA /* MyHealthWatch */,
+				0000000000000000000000BA /* MyHealthWidgets */,
+				0000000000000000000000CA /* MyHealthWatchTests */,
+				0000000000000000000000F0 /* SharedCore */,
+				0000000000000000000000F1 /* MyHealthIPhone */,
+				000000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000A2 /* MyHealthWatch.app */,
+				0000000000000000000000B2 /* MyHealthWidgets.appex */,
+				0000000000000000000000C2 /* MyHealthWatchTests.xctest */,
+				0000000000000000000000F3 /* MyHealthIPhone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0000000000000000000000A1 /* MyHealthWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0000000000000000000000A7 /* Build configuration list for PBXNativeTarget "MyHealthWatch" */;
+			buildPhases = (
+				0000000000000000000000A3 /* Sources */,
+				0000000000000000000000A4 /* Frameworks */,
+				0000000000000000000000A5 /* Resources */,
+				0000000000000000000000A6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0000000000000000000000D5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0000000000000000000000AA /* MyHealthWatch */,
+				0000000000000000000000F0 /* SharedCore */,
+			);
+			name = MyHealthWatch;
+			packageProductDependencies = (
+			);
+			productName = MyHealthWatch;
+			productReference = 0000000000000000000000A2 /* MyHealthWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0000000000000000000000B1 /* MyHealthWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0000000000000000000000B7 /* Build configuration list for PBXNativeTarget "MyHealthWidgets" */;
+			buildPhases = (
+				0000000000000000000000B3 /* Sources */,
+				0000000000000000000000B4 /* Frameworks */,
+				0000000000000000000000B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0000000000000000000000BA /* MyHealthWidgets */,
+			);
+			name = MyHealthWidgets;
+			packageProductDependencies = (
+			);
+			productName = MyHealthWidgets;
+			productReference = 0000000000000000000000B2 /* MyHealthWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		0000000000000000000000C1 /* MyHealthWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0000000000000000000000C7 /* Build configuration list for PBXNativeTarget "MyHealthWatchTests" */;
+			buildPhases = (
+				0000000000000000000000C3 /* Sources */,
+				0000000000000000000000C4 /* Frameworks */,
+				0000000000000000000000C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0000000000000000000000D3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0000000000000000000000CA /* MyHealthWatchTests */,
+			);
+			name = MyHealthWatchTests;
+			packageProductDependencies = (
+			);
+			productName = MyHealthWatchTests;
+			productReference = 0000000000000000000000C2 /* MyHealthWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0000000000000000000000F2 /* MyHealthIPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0000000000000000000000F4 /* Build configuration list for PBXNativeTarget "MyHealthIPhone" */;
+			buildPhases = (
+				0000000000000000000000FA /* Sources */,
+				0000000000000000000000FB /* Frameworks */,
+				0000000000000000000000FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0000000000000000000000F1 /* MyHealthIPhone */,
+				0000000000000000000000F0 /* SharedCore */,
+			);
+			name = MyHealthIPhone;
+			packageProductDependencies = (
+			);
+			productName = MyHealthIPhone;
+			productReference = 0000000000000000000000F3 /* MyHealthIPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					0000000000000000000000A1 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					0000000000000000000000B1 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					0000000000000000000000C1 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 0000000000000000000000E1 /* Build configuration list for PBXProject "MyHealth" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000000000000000000002;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 70;
+			productRefGroup = 000000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0000000000000000000000A1 /* MyHealthWatch */,
+				0000000000000000000000B1 /* MyHealthWidgets */,
+				0000000000000000000000C1 /* MyHealthWatchTests */,
+				0000000000000000000000F2 /* MyHealthIPhone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0000000000000000000000A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0000000000000000000000B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0000000000000000000000C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0000000000000000000000FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0000000000000000000000A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0000000000000000000000B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0000000000000000000000C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0000000000000000000000FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0000000000000000000000D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0000000000000000000000A1 /* MyHealthWatch */;
+			targetProxy = 0000000000000000000000D2 /* PBXContainerItemProxy */;
+		};
+		0000000000000000000000D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0000000000000000000000B1 /* MyHealthWidgets */;
+			targetProxy = 0000000000000000000000D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0000000000000000000000E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0000000000000000000000E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0000000000000000000000A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY_NEW = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = MyHealthWatch/MyHealthWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MyHealthWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myhealth.watch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		0000000000000000000000A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY_NEW = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = MyHealthWatch/MyHealthWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MyHealthWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myhealth.watch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		0000000000000000000000B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = MyHealthWidgets/MyHealthWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MyHealthWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myhealth.watch.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		0000000000000000000000B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = MyHealthWidgets/MyHealthWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MyHealthWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myhealth.watch.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		0000000000000000000000C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myhealth.watchtests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyHealthWatch.app/MyHealthWatch";
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		0000000000000000000000C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myhealth.watchtests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyHealthWatch.app/MyHealthWatch";
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		0000000000000000000000F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MyHealthIPhone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myhealth.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0000000000000000000000F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MyHealthIPhone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myhealth.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0000000000000000000000E1 /* Build configuration list for PBXProject "MyHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0000000000000000000000E2 /* Debug */,
+				0000000000000000000000E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0000000000000000000000A7 /* Build configuration list for PBXNativeTarget "MyHealthWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0000000000000000000000A8 /* Debug */,
+				0000000000000000000000A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0000000000000000000000B7 /* Build configuration list for PBXNativeTarget "MyHealthWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0000000000000000000000B8 /* Debug */,
+				0000000000000000000000B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0000000000000000000000C7 /* Build configuration list for PBXNativeTarget "MyHealthWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0000000000000000000000C8 /* Debug */,
+				0000000000000000000000C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0000000000000000000000F4 /* Build configuration list for PBXNativeTarget "MyHealthIPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0000000000000000000000F5 /* Debug */,
+				0000000000000000000000F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000001 /* Project object */;
+}
